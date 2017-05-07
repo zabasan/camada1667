@@ -1,0 +1,22 @@
+{
+  "name": "restexample",
+  "version": "1.0.0",
+  "description": "Esto es una ejemplo de una Rest API con Items e Usuarios",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Rest",
+    "API",
+    "NodeJS",
+    "CoderHouse",
+    "Camada1667"
+  ],
+  "author": "Camada1667",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
