@@ -1,20 +1,28 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const app = express();
 const mongoose = require('mongoose');
 
+const app = express();
+
 const userRouter = require('./routes/users');
+const articleRouter = require('./routes/articles');
 
-// Configuracion Express
+// Configuracion express
+
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extend: false }));
 
-// Inicializo la coneccion a la DB
+
+// Configuracion Rutas
+
+app.use('/users', userRouter());
+app.use('/articles', articleRouter());
+
+
+
 mongoose.connect('mongodb://localhost:27017/camada1667');
 
 
-// Configuracion de rutas
-app.use('/users', userRouter());
 
-app.listen(8000);
-console.log('Mi servidor esta levantado en 8000');
+app.listen(5000);
+console.log('servidor levantado');

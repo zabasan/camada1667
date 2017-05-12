@@ -1,21 +1,18 @@
 const mongoose = require('mongoose');
 
-// Defino os datos que va llevar mi modelo.
 let UserSchema = mongoose.Schema({
     name: String,
-    dni: Number,
     lastname: String,
+    dni: Number,
     nationality: String,
     isAuthor: Boolean,
     username: String,
     password: String
 });
 
-// Agrego Metodos al schema
-UserSchema.methods.fullname = function(){
+UserSchema.methods.fullname = function () {
     return this.name + ' ' + this.lastname;
 };
-
 User = mongoose.model('User', UserSchema);
 
 module.exports = User;
