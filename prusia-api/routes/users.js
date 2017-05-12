@@ -47,7 +47,6 @@ module.exports = function () {
 
  router.delete('/:id', function (req, res) {
      let id = req.params.id;
-     let o_id = new ObjectID(id);
 
      User.findByIdAndRemove(id).then(result => res.json(result));
  });
