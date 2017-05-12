@@ -1,0 +1,24 @@
+{
+  "name": "prusia-api",
+  "version": "0.0.1",
+  "description": "Api para la revista Prusia",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "articles",
+    "news",
+    "reactjs"
+  ],
+  "author": "camada1667",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.8"
+  }
+}
